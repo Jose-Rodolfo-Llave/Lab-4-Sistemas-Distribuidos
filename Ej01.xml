@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE libro [
+<!DOCTYPE BOE [
     <!-- Aquí comienza el DTD -->
-    <!ELEMENT libro (portada, cuerpo, contraportada)>
-    <!ELEMENT portada (titulo, edicion, autor, editor)>
-    <!ELEMENT titulo (#PCDATA)>
-    <!ELEMENT edicion (#PCDATA)>
-    <!ELEMENT autor (nombre, apellidos, email?)>
-    <!ELEMENT nombre (#PCDATA)>
-    <!ELEMENT apellidos (#PCDATA)>
-    <!ELEMENT email (#PCDATA)>
-    ...
+    <!ELEMENT BOE (TITULO, FECHA, SUMARIO)>
+    <!ELEMENT TITULO (#PCDATA)>
+    <!ELEMENT FECHA (AAAA, MM, DD)>
+    <!ELEMENT AAAA (#PCDATA)>
+    <!ELEMENT MM (#PCDATA)>
+    <!ELEMENT DD (#PCDATA)>
+    <!ELEMENT SUMARIO (SECCION+)>
+    <!ELEMENT SECCION (TIT-SECCION, APARTADO+)>
+    <!ELEMENT TIT-SECCION (#PCDATA)>
+    <!ELEMENT APARTADO (ORGANISMO, PARRAFO+)>
+    <!ELEMENT ORGANISMO (#PCDATA)>
+    <!ELEMENT PARRAFO (TEXTO, PAGINA+)>
+    <!ELEMENT TEXTO (#PCDATA)>
+    <!ELEMENT PAGINA (#PCDATA)>
     <!-- Aquí termina el DTD -->
 ]>
 <BOE>
